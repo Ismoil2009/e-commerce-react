@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
 import AddTodo from "./components/AddProduct";
 import Todo from "./components/AllProducts";
-import getStore from "./utils/get";
 import Navbar from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
 import Liked from "./components/Liked";
 import Login from "./components/Login";
 import Home from "./components/Home";
@@ -17,35 +15,18 @@ import { useGlobalContext } from "./context";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
-  const { user, setUser } = useGlobalContext();
-
-  const [todo, setTodo] = useState(getStore("todos"));
-  const [price, setPrice] = useState(getStore("price"));
-  const [basket, setBasket] = useState(getStore("basket"));
-
-  const removeItem = (id) => {
-    const newitem = todo.filter((item) => item.id !== id);
-    setTodo(newitem);
-  };
-
-  const editItem = (id) => {
-    const newItem = todo.find((item) => item.id === id);
-    setEditId(true);
-  };
-
-  const liked = (id) => {
-    const newItem = todo.find((item) => item.id === id);
-    setBasket([...basket, newItem]);
-  };
-
-  const cart = (id) => {
-    const newItem = todo.find((item) => item.id === id);
-  };
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todo)),
-      localStorage.setItem("basket", JSON.stringify(basket));
-  }, [todo, basket]);
+  const {
+    user,
+    setUser,
+    todo,
+    setTodo,
+    basket,
+    setBasket,
+    removeItem,
+    editItem,
+    liked,
+    cart,
+  } = useGlobalContext();
 
   return (
     <>

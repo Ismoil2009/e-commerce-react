@@ -28,7 +28,7 @@ export default function Todo({ id, todo, removeItem, liked }) {
                 <img src={BlinImg} alt="" />
                 <h2 className="ttl">{title}</h2>
                 <div className="btns">
-                  <button className="btn-1">
+                  <button className="btn-1" onClick={() => liked(id)}>
                     <FontAwesomeIcon icon={faCartShopping} />
                   </button>
                   <button className="btn-2" onClick={() => liked(id)}>
