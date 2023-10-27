@@ -28,6 +28,7 @@ const AppProvider = ({ children }) => {
     const newItem = todo.find((item) => item.id === id);
   };
 
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todo)),
       localStorage.setItem("basket", JSON.stringify(basket));
