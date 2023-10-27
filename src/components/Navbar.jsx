@@ -51,7 +51,6 @@ export default function Navbar() {
           <button className="signin">Войти</button>
         </Link>
       </ul>
-      {/* <h1 className="jst"></h1> */}
     </div>
   );
 }

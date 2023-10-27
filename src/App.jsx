@@ -20,6 +20,7 @@ function App() {
   const { user, setUser } = useGlobalContext();
 
   const [todo, setTodo] = useState(getStore("todos"));
+  const [price, setPrice] = useState(getStore("price"));
   const [basket, setBasket] = useState(getStore("basket"));
 
   const removeItem = (id) => {
@@ -35,6 +36,10 @@ function App() {
   const liked = (id) => {
     const newItem = todo.find((item) => item.id === id);
     setBasket([...basket, newItem]);
+  };
+
+  const cart = (id) => {
+    const newItem = todo.find((item) => item.id === id);
   };
 
   useEffect(() => {
@@ -55,6 +60,7 @@ function App() {
               removeItem={removeItem}
               editItem={editItem}
               liked={liked}
+              cart={cart}
             />
           }
         />

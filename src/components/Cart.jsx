@@ -1,4 +1,4 @@
-export default function Liked({ basket }) {
+export default function Cart({ basket }) {
   return (
     <>
       <h2 className="all">Корзина</h2>

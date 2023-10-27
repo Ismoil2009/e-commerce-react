@@ -35,10 +35,14 @@ export default function AddTodo({ todo, setTodo }) {
       </form>
       <div>
         <h2 className="dest">
-          Перейдите во <a className="destin" href="/all"> все продукты</a> чтобы увидеть все товары !
+          Перейдите во{" "}
+          <a className="destin" href="/all">
+            {" "}
+            все продукты
+          </a>{" "}
+          чтобы увидеть все товары !
         </h2>
       </div>
     </div>
   );
 }
-
