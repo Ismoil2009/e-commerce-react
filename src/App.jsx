@@ -52,7 +52,7 @@ function App() {
         <Route path="/liked" element={<Liked basket={basket} />} />
         <Route path="/login" element={<Login setUser={setUser} />} />
         <Route path="/logo" element={<Logo />} />
-        <Route path="/cart" element={<Cart basket={basket} />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/single/:id" element={<SinglePage />} />
         <Route
           path="/dash"

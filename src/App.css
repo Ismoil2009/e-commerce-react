@@ -379,6 +379,17 @@ a {
 
 .our-btns button {
   padding: 10px 20px;
+  background-color: #F3F2F1;
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: white;
+}
+
+.our-btns button:hover {
+  padding: 10px 20px;
   background-color: #70c05b;
   border: none;
   font-size: 16px;
